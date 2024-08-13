@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-12T19:14:40.187693" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Tests" source="C:\Users\Vinicius\Desktop\RDC\framework_api\tests\api_tests.robot">
+<test id="s1-t1" name="Validar Informacoes Do Pais" line="7">
+<kw name="Obter Informacoes Do Pais" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-08-12T19:14:40.894297" level="INFO">Creating Session using : alias=countries, url=https://restcountries.com/v3.1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>countries</arg>
+<arg>https://restcountries.com/v3.1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-08-12T19:14:40.894297" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-08-12T19:14:41.513958" level="INFO">GET Request : url=https://restcountries.com/v3.1/name/Brazil 
+ path_url=/v3.1/name/Brazil 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-08-12T19:14:41.514956" level="INFO">GET Response : url=https://restcountries.com/v3.1/name/Brazil 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.22.1', 'Date': 'Mon, 12 Aug 2024 22:14:41 GMT', 'Content-Type': 'application/json', 'Content-Length': '1700', 'Connection': 'keep-alive', 'Cache-Control': 'public, immutable, max-age=31556926', 'content-encoding': 'gzip'} 
+ body=[{"name":{"common":"Brazil","official":"Federative Republic of Brazil","nativeName":{"por":{"official":"República Federativa do Brasil","common":"Brasil"}}},"tld":[".br"],"cca2":"BR","ccn3":"076","cca3":"BRA","cioc":"BRA","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"BRL":{"name":"Brazilian real","symbol":"R$"}},"idd":{"root":"+5","suffixes":["5"]},"capital":["Brasília"],"altSpellings":["BR","Brasil","Federative Republic of Brazil","República Federativa do Brasil"],"region":"Americas","subregion":"South America","languages":{"por":"Portuguese"},"translations":{"ara":{"official":"جمهورية البرازيل الاتحادية","common":"البرازيل"},"bre":{"official":"Republik Kevreel Brazil","common":"Brazil"},"ces":{"official":"Brazilská federativní republika","common":"Brazílie"},"cym":{"official":"Gweriniaeth Ffederal Brasil","common":"Brasil"},"deu":{"official":"Föderative Republik Brasilien","common":"Brasilien"},"est":{"official":"Brasiilia Liitvabariik","common":"Brasiilia"},"fin":{"official":"Brasilian liittotasavalta","common":"Brasilia"},"fra":{"official":"République fédérative du Brésil","common":"Brésil"},"hrv":{"official":"Savezne Republike Brazil","common":"Brazil"},"hun":{"official":"Brazil Szövetségi Köztársaság","common":"Brazília"},"ita":{"official":"Repubblica federativa del Brasile","common":"Brasile"},"jpn":{"official":"ブラジル連邦共和国","common":"ブラジル"},"kor":{"official":"브라질 연방 공화국","common":"브라질"},"nld":{"official":"Federale Republiek Brazilië","common":"Brazilië"},"per":{"official":"جمهوری فدراتیو برزیل","common":"برزیل"},"pol":{"official":"Federacyjna Republika Brazylii","common":"Brazylia"},"por":{"official":"República Federativa do Brasil","common":"Brasil"},"rus":{"official":"Федеративная Республика Бразилия","common":"Бразилия"},"slk":{"official":"Brazílska federatívna republika","common":"Brazília"},"spa":{"official":"República Federativa del Brasil","common":"Brasil"},"srp":{"official":"Савезна Република Бразил","common":"Бразил"},"swe":{"official":"Förbundsrepubliken Brasilien","common":"Brasilien"},"tur":{"official":"Brezilya Federal Cumhuriyeti","common":"Brezilya"},"urd":{"official":"وفاقی جمہوریہ برازیل","common":"برازیل"},"zho":{"official":"巴西联邦共和国","common":"巴西"}},"latlng":[-10.0,-55.0],"landlocked":false,"borders":["ARG","BOL","COL","GUF","GUY","PRY","PER","SUR","URY","VEN"],"area":8515767.0,"demonyms":{"eng":{"f":"Brazilian","m":"Brazilian"},"fra":{"f":"Brésilienne","m":"Brésilien"}},"flag":"\uD83C\uDDE7\uD83C\uDDF7","maps":{"googleMaps":"https://goo.gl/maps/waCKk21HeeqFzkNC9","openStreetMaps":"https://www.openstreetmap.org/relation/59470"},"population":212559409,"gini":{"2019":53.4},"fifa":"BRA","car":{"signs":["BR"],"side":"right"},"timezones":["UTC-05:00","UTC-04:00","UTC-03:00","UTC-02:00"],"continents":["South America"],"flags":{"png":"https://flagcdn.com/w320/br.png","svg":"https://flagcdn.com/br.svg","alt":"The flag of Brazil has a green field with a large yellow rhombus in the center. Within the rhombus is a dark blue globe with twenty-seven small five-pointed white stars depicting a starry sky and a thin white convex horizontal band inscribed with the national motto 'Ordem e Progresso' across its center."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/br.png","svg":"https://mainfacts.com/media/images/coats_of_arms/br.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[-15.79,-47.88]},"postalCode":{"format":"#####-###","regex":"^(\\d{8})$"}}] 
+ </msg>
+<msg time="2024-08-12T19:14:41.514956" level="INFO">C:\Users\Vinicius\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restcountries.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-08-12T19:14:41.515926" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>countries</arg>
+<arg>/name/Brazil</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-08-12T19:14:40.894297" elapsed="0.621629"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-08-12T19:14:41.517928" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-08-12T19:14:41.515926" elapsed="0.002002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<arg>DEBUG</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-12T19:14:41.517928" elapsed="0.001999"/>
+</kw>
+<doc>Envia uma requisição GET para obter informações sobre um país</doc>
+<status status="PASS" start="2024-08-12T19:14:40.893306" elapsed="0.626621"/>
+</kw>
+<doc>Testa a resposta da API de informações sobre um país</doc>
+<tag>country</tag>
+<status status="PASS" start="2024-08-12T19:14:40.892281" elapsed="0.628646"/>
+</test>
+<status status="PASS" start="2024-08-12T19:14:40.189704" elapsed="1.333221"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">country</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Api Tests">Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
