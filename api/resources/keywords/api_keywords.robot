@@ -1,6 +1,7 @@
 *** Settings ***
-Library    RequestsLibrary
-Library    AllureLibrary
+Library     RequestsLibrary
+Library     AllureLibrary
+Variables   ../variables/variables.yaml
 
 *** Variables ***
 ${BASE_URL}     https://restcountries.com/v3.1
