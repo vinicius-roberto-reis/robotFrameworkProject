@@ -1,6 +1,10 @@
 *** Settings ***
 Library    RequestsLibrary
-Library  AllureLibrary
+Library    AllureLibrary
+
+*** Variables ***
+${BASE_URL}     https://restcountries.com/v3.1
+${COUNTRY}      Brazil
 
 *** Keywords ***
 Obter Informacoes Do Pais
@@ -9,4 +13,3 @@ Obter Informacoes Do Pais
     ${response}=    GET On Session    countries    /name/Brazil
     Should Be Equal As Numbers    ${response.status_code}    200
     Log    ${response.json()}
-

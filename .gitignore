@@ -1,0 +1,11 @@
+# Ignorar arquivos de output do Robot Framework
+output.xml
+log.html
+report.html
+output/
+
+# Ignorar outras pastas e arquivos que não são necessários no repositório
+.idea/
+.vscode/
+__pycache__/
+*.pyc
