@@ -2,5 +2,7 @@ robotframework
 requests
 robotframework-requests
 robotframework-pabot
+robotframework-jsonlibrary
+
 
 
