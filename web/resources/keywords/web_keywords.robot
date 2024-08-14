@@ -1,12 +1,13 @@
 *** Settings ***
-Library    RequestsLibrary
-Library  AllureLibrary
+Library     SeleniumLibrary
+
+*** Variables ***
+${url}              https://rdcviagens.com.br
 
 *** Keywords ***
-Obter Informacoes Do Pais
-    [Documentation]    Envia uma requisição GET para obter informações sobre um país
-    Create Session    countries    ${BASE_URL}
-    ${response}=    GET On Session    countries    /name/Brazil
-    Should Be Equal As Numbers    ${response.status_code}    200
-    Log    ${response.json()}
+Inicia sessão
+    Open Browser                    ${url}      chrome
 
+Encerra sessão
+    Capture Page Screenshot
+    Close Browser

@@ -1,10 +1,10 @@
 *** Settings ***
 Library           RequestsLibrary
-Resource           ../resources/keywords/api_keywords.robot
-Variables          ../resources/variables/api_variables.robot
+Resource           ../resources/keywords/web_keywords.robot
 
 *** Test Cases ***
-Validar Informacoes Do Pais
-    [Documentation]    Testa a resposta da API de informações sobre um país
+Abre e fecha o site RDC Viagens
+    [Documentation]    Testa site RDC Viagens
     [Tags]   cenario_positivo
-    Obter Informacoes Do Pais
+    Inicia sessão 
+    Encerra sessão
