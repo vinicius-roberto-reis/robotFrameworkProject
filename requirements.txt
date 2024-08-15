@@ -3,6 +3,6 @@ requests
 robotframework-requests
 robotframework-pabot
 robotframework-jsonlibrary
-
-
-
+allure-robotframework
+robotframework-seleniumlibrary
+browserstack-sdk
