@@ -1,6 +1,5 @@
 import pyodbc
-
-
+print("Script insert_data.py is runninfffffffffffffffffffffffffffffffffffffffffffffffffffg")
 def insert_data():
     try:
         # Tentar estabelecer conexão
@@ -13,12 +12,12 @@ def insert_data():
         # Inserir valores completos para as colunas DATETIME
         cursor.execute(
             "INSERT INTO tbl_execution (date_time_start, date_time_end, test_case, result) VALUES (?, ?, ?, ?)",
-            ('2024-08-1', '2024-08-14 ', 'Test', 'asa'))
+            ('2024-08-1', '2024-08-14 ', 'teste', 'asa'))
         conn.commit()
         print("Data inserted successfully.")
 
         # Verificar se os dados foram inseridos
-        cursor.execute("SELECT * FROM tbl_execution WHERE result='PASS'")
+        cursor.execute("SELECT * FROM tbl_execution WHERE result='PASSoi'")
         rows = cursor.fetchall()
         for row in rows:
             print(row)
@@ -28,3 +27,7 @@ def insert_data():
 
     except Exception as e:
         print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    print("Calling insert_data method")
+    insert_data()
