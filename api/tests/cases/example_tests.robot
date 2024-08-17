@@ -1,7 +1,7 @@
 *** Settings ***
 Library           RequestsLibrary
 Resource          ../../keywords/example_keywords.robot
-Variables         ../../resources/variables/variables.robot
+#Variables         ../../resources/variables/variables.robot
 
 *** Variables ***
 ${get_endpoint}     /name/Brazil
@@ -11,7 +11,7 @@ ${post_endpoint}    /api/users
 
 
 *** Test Cases ***
-Validar Informacoes Do Pais
+Validar Requisicao GET Criacao de Usuario
     [Documentation]    Testa a resposta valida do GET
     [Tags]   cenario_positivo_GET
     Valido a requisição GET com sucesso do endpoint     ${get_endpoint}
