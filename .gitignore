@@ -9,3 +9,6 @@ output/
 .vscode/
 __pycache__/
 *.pyc
+
+# Ignorar pasta de evidências web
+web/screenshot

@@ -1,10 +1,12 @@
 *** Settings ***
-Library           RequestsLibrary
 Resource           ../resources/keywords/web_keywords.robot
+Test Setup         Inicia sessão
+Test Teardown      Encerra sessão
 
 *** Test Cases ***
-Abre e fecha o site RDC Viagens
-    [Documentation]    Testa site RDC Viagens
-    [Tags]   cenario_positivo
-    Inicia sessão 
-    Encerra sessão
+Recaptcha ao realizar login
+    [Documentation]    Vaidar que desafio do recaptcha é exibido ao tentar realizar o login
+    [Tags]   recaptcha_challenge
+    Dado que estou na pagina da RDC Viagens
+    Quando realizo o login
+    Entao valido que o desafio do Recaptcha foi exibido
