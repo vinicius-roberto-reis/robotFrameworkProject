@@ -1,12 +1,12 @@
 *** Settings ***
 Library           RequestsLibrary
 Resource          ../../keywords/example_keywords.robot
-#Variables         ../../resources/variables/variables.robot
+Variables         ../../resources/variables/variables.robot
 
 *** Variables ***
 ${get_endpoint}     /name/Brazil
 ${post_body_file}   ${EXECDIR}/api/resources/bodies/post_user_body.json
-${max_time}     1500ms  #variavel para teste de performance
+${max_time}     1500ms
 ${post_endpoint}    /api/users
 
 

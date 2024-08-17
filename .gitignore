@@ -6,7 +6,6 @@ output/
 
 # Ignorar outras pastas e arquivos que não são necessários no repositório
 .idea/
-.idea/misc.xml
 .vscode/
 __pycache__/
 *.pyc
