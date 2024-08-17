@@ -43,4 +43,4 @@ class CustomListener:
             cursor.close()
             conn.close()
         except Exception as e:
-            print(f"\nOcorreu um erro ao salvar dados no banco de dados: {e}\n")
+            logger.error(f"Ocorreu um erro inesperado ao salvar dados no banco de dados: {e}")
