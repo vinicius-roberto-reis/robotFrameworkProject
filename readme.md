@@ -58,5 +58,3 @@ Clique [aqui](https://github.com/git-for-windows/git/releases/download/v2.46.0.w
 4.**Gerar o relatório do Allure 📊:**    Após rodar os testes, gere o relatório com:
 
     allure serve output
-
-
